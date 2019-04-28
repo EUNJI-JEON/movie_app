@@ -50,17 +50,14 @@ class App extends Component {
 
     return movies
 
-    
-
   }
 
   render() {
 
     return (
       <div className="APP">
+        {this.state.movies ? this._renderMovies() : 'Loading'}
   
-
-      
       </div>
     );
   }

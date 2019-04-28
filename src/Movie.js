@@ -28,7 +28,17 @@ class Movie extends Component {
 
 }
 
+function Movie({title, poster}){
+    return (
+        <div>
+            <MoviePoster poster={poster}/>
+            <h1>{this.props.title}</h1>
 
+        </div>
+   
+
+    )
+}
 
 class MoviePoster extends Component{
 
@@ -43,5 +53,14 @@ class MoviePoster extends Component{
     }
 }
 
+function MoviePoster({poster}){
+    return (
+        <img src={this.props.poster} alt="Movie Poster"/>
+    )
+}
+
+MoviePoster.propTypes= {
+    poster: PropTypes.string.isRequired
+}
 
 export default Movie
